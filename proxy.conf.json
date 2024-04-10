@@ -1,0 +1,9 @@
+{
+    "/aqrab/api/*": {
+      "target": "https://enshaalah-cj4uxmvvwq-uc.a.run.app",
+      "secure": false,
+      "changeOrigin": true,
+      "pathRewrite": { "^/aqrab/api": "" }
+    }
+  }
+  
