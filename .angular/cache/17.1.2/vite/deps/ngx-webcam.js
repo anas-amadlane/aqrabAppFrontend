@@ -1,7 +1,7 @@
 import {
   CommonModule,
   NgIf
-} from "./chunk-ROE6QHGB.js";
+} from "./chunk-74UZX5ZA.js";
 import {
   Component,
   EventEmitter,
@@ -28,8 +28,8 @@ import {
   ɵɵrestoreView,
   ɵɵtemplate,
   ɵɵviewQuery
-} from "./chunk-MPWMB5DI.js";
-import "./chunk-WSA2QMXP.js";
+} from "./chunk-OHNYBYKG.js";
+import "./chunk-T7RKEGOE.js";
 import "./chunk-ASLTLD6L.js";
 
 // node_modules/ngx-webcam/fesm2020/ngx-webcam.mjs
