@@ -8,17 +8,17 @@
 
 </head>
 <body>
-<div class="wrapper" style="text-align:center">
+<div class="wrapper center-container col-12 col-sm-6 " >
   <div class="title" style="text-align:center">Hello {{ loggedInUser.firstName }}</div>
   <form [formGroup]="homeForm">
     <div class="row" style="margin-top: 19px">
       <div class="col-sm-12 form-group required">
-        <div class="title1">Your balance is:<br> {{ loggedInUser.balance }} DH</div>
+        <div class="title1">Your balance is رصيدك هو:<br> {{ loggedInUser.balance }} DH</div>
 
       </div>
     </div>
-    <div class="field" style="margin-top:35px" (click)="scanCodeQr()">
-      <input type="submit" value="PAY " [disabled]="isBalanceNull">
+    <div class="field" style="margin-top:5%" (click)="scanCodeQr()">
+      <input class="btn" type="submit" value="PAY الدفع " [disabled]="isBalanceNull">
     </div>
     <div *ngIf="error"  class="error-messages text-danger">
       {{error}}
@@ -36,7 +36,7 @@
 <!--
 <div class="footerContainer fixed-bottom" style="margin-top: 90px">
 -->
-<div class="footerContainer" style="margin-top: 90px">
+<div class="footerContainer">
   <div class="footerNav">
     <ul *ngIf="loggedInUser.typeUser=='customer'">
       <li><a style="color: #4158d0" href="home">Home</a></li>
@@ -47,3 +47,6 @@
 
 </div>
 </div>
+</body>
+</html>
+

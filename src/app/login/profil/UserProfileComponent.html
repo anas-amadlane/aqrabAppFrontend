@@ -8,35 +8,40 @@
 </head>
 <body>
 
-<div class="profile-container">
-  <img src="assets/imag/profilUser.png" alt="Profile Picture" class="profile-picture">
+<div class="  wrapper center-container col-12 ">
+  <div class="title">Profil</div>
+  <div class=" row  ">
+    <div class="col-sm-4  sticky-top " >
+    <img src="assets/imag/profilUser.png" alt="Profile Picture" class="profile-picture ">
+  </div>
+  </div>
 
-  <div class="profile-details" >
-    <div class="col-sm-12 row">
-      <span class="detail-label">Full Name:</span>
+  <div class=" row  mb-3 profile-details" >
+
+
+      <span class="input-box">Full Name:     </span>
       <span class="detail-value">{{ user.firstName }} {{user.lastName}}</span>
-    </div>
-    <div class="row">
-      <span class="detail-label">Email:</span>
+    <div class=" row  mb-3">
+      <span class="input-box">Email:     </span>
       <span class="detail-value">{{user.email}}</span>
     </div>
-    <div class="row" *ngIf="user.typeUser=='customer'">
-      <span class="detail-label" >Id User:</span>
+    <div class=" row  mb-3" *ngIf="user.typeUser=='customer'">
+      <span class="input-box" >Id User:      </span>
       <span class="detail-value">{{user.idBusiness}}</span>
     </div>
-    <div class="row">
-      <span class="detail-label">Phone:</span>
+    <div class=" row  mb-3">
+      <span class="input-box">Phone:     </span>
       <span class="detail-value">{{user.phone}}</span>
     </div>
-    <div class="row" style="margin-top: 35px; margin-bottom: 50px; margin-left: 30px ">
+
       <div  class="input-box field" (click)="logout()"  >
         <div class="input-box button">
-          <input type="Submit" value="logout">
+          <input type="Submit" value="logout تسجيل خروج ">
         </div>
       </div>
-    </div>
+
     <div class="footerContainer">
-      <div class="footerNav">
+      <div class="footerNav sticky-bottom">
         <ul *ngIf="this.user.typeUser=='customer'">
           <li ><a style="color: #000000" href="home">Home</a></li>
           <li><a style="color: #000000" href="transactions">Transactions</a></li>
@@ -57,6 +62,7 @@
       </div>
     </div>
   </div>
+
 </div>
 </body>
 </html>

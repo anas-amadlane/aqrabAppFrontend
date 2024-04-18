@@ -4,89 +4,102 @@
   font-size: 80%;
 }
 
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-html,body{
-  display: grid;
-  height: 100%;
-  width: 100%;
-  place-items: center;
-  background: #f2f2f2;
-  /* background: linear-gradient(-135deg, #c850c0, #4158d0); */
-}
 body{
-  min-height: 100vh;
-  display: flex;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.93);
 }
+
 ::selection{
   background: #4158d0;
   color: #fff;
 }
-.wrapper{
-  position: relative;
-  max-width: 600px;
-  width: 100%;
-  height: 762px;
-  background: #fff;
-  padding: 34px;
-  border-radius: 6px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+
+@media only screen and (max-device-width:1200px) and (-webkit-min-device-pixel-ratio: 2) {
+  .wrapper {
+
+
+    width: 85%;
+    margin-left:auto;
+    margin-right:auto;
+    background: #fff;
+    padding: 3%;
+    border-radius:5%;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    align-content: center;
+
+  }
+  .logo{
+    line-height: 50%;
+      width: 50%;
+    align-content: center;
+    color: #fff; /* Set the text color to white */
+  }
 }
+@media screen and (min-width: 1200px) {
+  .wrapper{
+
+    width: 85%;
+    margin-left:auto;
+    margin-right:auto;
+    background: #fff;
+    padding: 3%;
+    border-radius:5%;
+
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    align-content: center;
+  }
+  .logo{
+    line-height: 50%;
+    width: 20%;
+    align-content: center;
+    color: #fff; /* Set the text color to white */
+  }
+}
+
 .wrapper .title{
-  font-size: 35px;
-  font-weight: 600;
+  font-size: 200%;
+  font-weight: bold;
   text-align: center;
-  line-height: 100px;
+  line-height: 230%;
   color: #fff;
+
   user-select: none;
-  border-radius: 15px 15px 0 0;
+  border-radius: 15px 15px ;
   background: linear-gradient(-135deg, #af74de, #4158d0);
 }
-.logo{
-  font-size: 35px;
-  font-weight: 900;
-  line-height: 80px;
-  margin-left: 24px;
-  user-select: none;
-  text-align: center;
-  color: #fff; /* Set the text color to white */
-  padding: 8px; /* Add padding to create visible borders */
-}
-.logoHG {
-  font-size: 35px;
-  font-weight: 900;
-  text-align: center;
-  line-height: 80px;
-  margin-left: 20px;
-  user-select: none;
-  background: linear-gradient(-135deg, #af74de, #4158d0);
-  color: #fff; /* Set the text color to white */
-  border-radius:15px 15px 0 0; /* Apply the same border-radius as the title */
-  padding: 8px; /* Add padding to create visible borders */
-}
+
 
 
 .wrapper form{
-  padding: 10px 30px 50px 30px;
+  height: 2%;
+  margin: 2% 3%;
+
 }
-.wrapper form .field{
-  height: 50px;
-  width: 100%;
-  margin-top: 20px;
+.wrapper form .
+field{
   position: relative;
+  padding: 0.5% 3%;
+  height: 33px !important;
+  border: 1px solid transparent;
+  border-right: 4px;
+  cursor: text;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-left: 2%;
 }
 .wrapper form .field input{
   height: 100%;
   width: 100%;
   outline: none;
-  font-size: 17px;
+  font-size: 100%;
   padding-left: 20px;
   border: 1px solid lightgrey;
   border-radius: 25px;
@@ -97,9 +110,7 @@ form .field input:valid{
   border-color: #4158d0;
 }
 .wrapper form .field label{
-  position: absolute;
-  top: 50%;
-  left: 20px;
+  margin-top: auto;
   color: #999999;
   font-weight: 400;
   font-size: 17px;
@@ -109,8 +120,8 @@ form .field input:valid{
 }
 form .field input:focus ~ label,
 form .field input:valid ~ label{
-  top: 0%;
-  font-size: 16px;
+
+  font-size: 100%;
   color: #4158d0;
   background: #fff;
   transform: translateY(-50%);
@@ -118,8 +129,7 @@ form .field input:valid ~ label{
 form .content{
   display: flex;
   width: 100%;
-  height: 50px;
-  font-size: 16px;
+  font-size: 100%;
   align-items: center;
   justify-content: space-around;
 }
@@ -140,12 +150,12 @@ form .content label{
 }
 
 form .field input[type="submit"]{
-  color: #fff;
+  color: white;
   border: none;
   padding-left: 0;
-  margin-top: -10px;
-  font-size: 20px;
-  font-weight: 500;
+  margin-top:2%;
+  text-align: center;
+  font-size: 150%;
   cursor: pointer;
   background: linear-gradient(-135deg, #c850c0, #4158d0);
   transition: all 0.3s ease;
@@ -155,13 +165,15 @@ form .field input[type="submit"]:active{
 }
 form .signup-link{
   color: #262626;
-  margin-top: 20px;
+  margin-top: 5%;
   text-align: center;
 }
 form .pass-link a,
 form .signup-link a{
   color: #4158d0;
-  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3%;
 }
 form .pass-link a:hover,
 form .signup-link a:hover{

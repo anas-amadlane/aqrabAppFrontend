@@ -4,30 +4,32 @@
   <meta charset="utf-8">
 </head>
 <body>
-<div class="wrapper" >
+<div class="wrapper center-container col-12 col-sm-6 " >
   <div class="title">Hello {{ loggedInUser.firstName }}</div>
-  <div style="margin-bottom: 300px">
-    <div >
-      <h2 style="margin-top: 40px;  text-align: center"> enter an Amount (MAD) </h2>
+  <div class="row" style="margin-bottom:90%">
+    <div class="col-sm-12 ">
+      <h2 style="margin-top: 3%;  text-align: center"> enter an Amount (MAD) أدخل المبلغ (درهم) </h2>
       <div class="input-box" style="text-align: center" >
         <input type="number" [(ngModel)]="myQrCodeValue">
       </div>
 
       <div  class="input-box" style="text-align: center" (click)="createQrCode()">
-        <div class="input-box button">
-          <input type="submit" value="Generate code">
+          <input class="btn" type="submit" value="Generate code(إنشاءالرمز)">
+        </div>
+        <div class="row mb-3">
+          <div class="col-sm-12 " style="text-align: center" *ngIf="qrCodeValue">
+            <qrcode [qrdata]="qrCodeValue" [width]="100" [errorCorrectionLevel]="'M'"></qrcode>
+          </div>
         </div>
         <div *ngIf="error"  class="error-messages text-danger">
           {{error}}
         </div>
-        <div class="row col-md-4 offset-md-4" *ngIf="qrCodeValue">
-          <qrcode [qrdata]="qrCodeValue" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
-        </div>
-      </div>
+
+
     </div>
   </div  >
   <div class="footerContainer">
-    <div class="footerNav" *ngIf="loggedInUser.typeUser=='seller'">
+    <div class="footerNav sticky-bottom"*ngIf="loggedInUser.typeUser=='seller'">
       <ul>
         <li><a style="color: #4158d0" href="sellerHome">Home</a></li>
         <li><a style="color: #000000" href="customersList">Customers</a></li>
@@ -36,7 +38,8 @@
       </ul>
     </div>
   </div>
+
 </div>
 </body>
-
+</html>
 
